@@ -91,18 +91,9 @@
     }
 </style>
 <svelte:head>
-    {#if import.meta.env.PROD }
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8P9T7XMGMD"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-8P9T7XMGMD');
-        </script>
-    {/if}
     <title>{metaTitle} | John Osterman</title>
+    <meta http-equiv="refresh" content="0; url=https://osterman.blog{$page.url.pathname}" />
+    <link rel="canonical" href="https://osterman.blog{$page.url.pathname}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@johnaosterman" />
     <meta name="twitter:url" content="https://osterman.io{$page.url.pathname}" />
