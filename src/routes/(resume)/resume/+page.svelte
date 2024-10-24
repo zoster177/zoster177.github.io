@@ -1,5 +1,4 @@
 <svelte:head>
-    <meta http-equiv="refresh" content="0; url=https://osterman.blog{$page.url.pathname}" />
     <meta name="robots" content="noindex" />
 </svelte:head>
 <header class="grid">
