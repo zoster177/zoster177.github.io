@@ -2,9 +2,9 @@
 import type { ResponseBody } from '@sveltejs/kit';
 import type { PageServerLoad } from "./$types";
 import { initContentful, getPageContent, getEntry } from '$utils/contentful';
-import { C_SPACE, C_TOKEN } from "$env/static/private";
+import { C_SPACE, C_TOKEN, TEST } from "$env/static/private";
 
-initContentful(C_SPACE, C_TOKEN);
+initContentful(C_SPACE, C_TOKEN, TEST);
 export const load:PageServerLoad<ResponseBody> = async function _GET() {
     const response = await getPageContent('homepage');
     const fields = response.fields

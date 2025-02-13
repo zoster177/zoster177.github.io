@@ -13,6 +13,13 @@ jobs:
         node-version: [16.x]
 
     steps:
+    - name: Set branch-based environment variables
+      uses: iamtheyammer/branch-env-vars@1.2.2
+      with:
+        TEST: |
+          main:prod
+          !default:dev
+
     - name: Checkout   
       uses: actions/checkout@v2
       with: 

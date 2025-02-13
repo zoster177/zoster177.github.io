@@ -6,7 +6,8 @@ const markdown = MarkdownIt({
     typographer: true
 });
 let client;
-export function initContentful(C_SPACE, C_TOKEN){
+export function initContentful(C_SPACE, C_TOKEN, TEST){
+    console.log(TEST);
     client = contentful.createClient({
         space: C_SPACE,
         //environment: 'master',
@@ -66,7 +67,6 @@ async function sourceSetify(html){
     return replaceAsync(html, regex, addContentifyInfo);
 }
 export async function getPaginatedCollection(content_type = "blogPost", skip = 0, limit = 100){
-    console.log(content_type);
     return await client.getEntries({
         content_type,
         skip,

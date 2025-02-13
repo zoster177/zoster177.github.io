@@ -11,6 +11,7 @@ const client = contentful.createClient({
     accessToken: process.env.C_TOKEN
 });
 async function getPaginatedCollection({content_type = "blogPost", skip = 0, limit = 100, base = ''}){
+    console.log({TEST: process.env.TEST});
     return client.getEntries({
         content_type,
         skip,
