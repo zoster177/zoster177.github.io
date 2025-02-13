@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Set branch-based environment variables
-      uses: iamtheyammer/branch-env-vars@1.2.2
+      uses: iamtheyammer/branch-env-vars@1.2.1
       with:
         TEST: |
           main:prod
